@@ -1,0 +1,280 @@
+// $blue: #3498DB;
+
+/************** GENERAL STYLES **************/
+html {
+background: #FFF;
+font-family: 'Lato', Helvetica, serif;
+text-align: center;
+}
+
+#title {
+  font-size: 30px;
+  font-weight: bold;
+   font-family: 'lato', Helvetica, serif;
+  color: white;
+  opacity: .2;
+  float: left;
+  margin: 0;
+}
+#twitter {
+  float: right;
+}
+h2 {
+	overflow: hidden;
+}
+input {
+  margin-top: 25px;
+  opacity: 1;
+  color: white;
+  background-color: black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+textarea, input { 
+  outline: none;
+  color: white; 
+}
+hr {
+  width: 235px;
+  color: gray;
+  margin-top: -2px;
+}
+#company {
+	padding: 0 0 3px 0;
+	font-size: 2.5em;
+  letter-spacing: .05em;
+  width: 250px;
+  margin: 0;
+  opacity: 0.2;
+  background: transparent;
+  border-bottom: 3px solid;
+      -webkit-transition: opacity .25s ease-in-out;
+
+}
+
+#company:focus {
+  opacity: 1;
+}
+
+.header {
+	background-color: #000;
+	padding: 60px 40px 40px;
+  -webkit-transition: background-color .5s;
+}
+.header input {
+  margin-top: 25px;
+}
+#results {
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: background-color .5s;  
+}
+#contact {
+  background-color: #AD7DFF;
+  padding: 20px;
+  position: fixed-bottom;
+}
+
+
+/************** FONTS **************/
+@font-face
+{
+font-family: 'Marcellus SC', serif;
+font-family: 'Fauna One', serif;
+font-family: 'Yesteryear', cursive;
+font-family: 'Port Lligat Slab', serif;
+font-family: 'Happy Monkey', cursive;
+font-family: 'Londrina Shadow', cursive;
+font-family: 'Kavoon', cursive;
+font-family: 'Press Start 2P', cursive;
+font-family: 'IM Fell Double Pica', serif;
+}
+#one {
+	font-family: 'Marcellus SC', serif;
+}
+#two {
+	font-family: 'Fauna One', serif;
+}
+#three {
+	font-family: 'Yesteryear', cursive;
+}
+#four {
+	font-family: 'Port Lligat Slab', serif;
+}
+#five {
+	font-family: 'Happy Monkey', cursive;
+}
+#six {
+	font-family: 'Londrina Shadow', cursive;
+}
+#seven {
+	font-family: 'Kavoon', cursive;
+}
+#eight {
+	font-family: 'Press Start 2P', cursive;
+}
+#nine {
+	font-family: 'IM Fell Double Pica', serif;
+}
+
+
+/************** FILTERS **************/
+#filters {
+  height: 100px;
+  margin-top: 40px;
+}
+.filter {
+  display: inline-block;
+  float: right;
+  width: 100px;
+  height: 40px;
+  position: relative;
+  margin: 0px auto;
+}
+.filter input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 0;
+  margin-left: -50px;
+}
+.filter label {
+  display: block;
+  padding-top: px;
+  text-align: center;
+  color: #DDD;
+  width: 100%;
+  height: 100%;
+  background-color: #22B7EB;
+  border-radius: 3px;
+  border-bottom: 3px solid #11A6DA;
+  font-size: 20px;
+  line-height: 40px;
+}
+.filter input:checked ~ label {
+  background-color: #11A6DA;
+  border-bottom: 3px solid #0095C9;
+  color: #FFF;
+}
+
+
+/************** RESULTS **************/
+#results {
+	display: none;
+}
+
+
+/* CARD CONSTRUCTION */
+.card {
+    overflow: hidden;
+    color: #000;
+    text-align: center;
+    font-size: 4em;
+    padding-top: 25%;
+    padding-bottom: 5%;
+    position: relative;
+  -webkit-border-radius: 5px;
+    -webkit-transition: background-color .5s;
+
+
+}
+.front {
+    width: 100%;
+    line-height: 75px;
+    margin-top: 100%;
+    padding: 2% 5%; 
+    text-align: left;
+    z-index: 10;
+    font-size: 18px;
+    color: #FFF;
+    background-color: #3C3C3C;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.card .face{
+        -webkit-transition: margin .5s; 
+ height: 100px;
+
+}
+.card:hover .face{
+  margin-top: -15%;
+  margin-bottom: 15%;
+          -webkit-transition: margin .5s; 
+
+
+}
+.card:hover {
+  background-color: #CCC;
+}
+.card:hover > .front {
+    opacity: 1;
+}
+.heart {
+  float: right;
+	cursor: hand;
+  -webkit-transition: color .5s;
+}
+.heart:hover {
+  color: red;
+}
+
+/************** ICONS AND ANIMATIONS **************/
+.ss-icon a {
+  margin: 30px 10px 0px 10px;
+  color: white;
+  font-size: 2em;
+  text-decoration: none;
+  -webkit-transition: color .5s;
+  display: inline-block;
+  padding-bottom: 0px;
+}
+.ss-icon a:hover {
+  color: #22B7EB !important;
+  -webkit-animation: jiggle 1.5s;  
+}
+@-webkit-keyframes jiggle {
+  0% { -webkit-transform: rotate(15deg); }  
+  25% { -webkit-transform: rotate(-15deg); }
+  50% { -webkit-transform: rotate(5deg); }
+  75% { -webkit-transform: rotate(-5deg); }
+  100% { -webkit-transform: rotate(0deg); }
+}
+
+/************** DYNAMIC CHANGES **************/
+/*.mute {
+  background-color: white !important;
+  border-color: white;
+  color: #CCC !important;
+}*/
+.mute2 {
+  background-color: #262626;
+  color: #676767;
+}
+.mute3 {
+  background-color: #000;
+}
+.mute4 {
+
+  color: #FFF;
+}
+/*.mute5 {
+  background-color: #3C3C3C;
+}*/
+.mute4:hover {
+    background-color: #262626;
+}
+
+.liked1 {
+  color: red;
+}
+.liked2 {
+  color: #000;
+}
